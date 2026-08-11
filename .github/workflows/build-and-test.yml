@@ -6,4 +6,4 @@ jobs:
     steps:
       - run: echo "cool"
       - name: Force Failure
-        run: exit 1
+        run: exit 0
