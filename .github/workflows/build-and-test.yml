@@ -4,4 +4,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "cool" || exit 0
+      - run: echo "cool"
+      - name: Force Failure
+        run: exit 1
