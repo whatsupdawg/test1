@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "cool"
-      - name: Force Failure
+      - name: Exit Clean
         run: exit 0
