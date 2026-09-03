@@ -32,5 +32,5 @@ jobs:
           share-env: image_tag
 
 
-      - name: Performance Testing
-        uses: whatsupdawg/test1/github/workflows/shared-workflow.yml@main
+      - name: Passing vars to new workflow
+        uses: whatsupdawg/test1/workflows/shared-workflow.yml@main
