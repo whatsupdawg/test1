@@ -16,5 +16,8 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: ${{ env.node_version }}
-      - run: npm ci
-      - run: ${{ env.test_command }}
+          
+      - name: Test Vars
+        run: |
+          echo "node version ${{ env.node_version }}"
+          echo "test_command ${{ env.test_command }}"
