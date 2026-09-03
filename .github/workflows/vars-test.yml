@@ -33,4 +33,4 @@ jobs:
 
 
       - name: Performance Testing
-        uses: ./.github/workflows/shared-workflow.yml      
+        uses: whatsupdawg/test1/github/workflows/shared-workflow.yml@main
