@@ -3,7 +3,7 @@ on:
   workflow_call:
 
 jobs:
-  build:
+  print-shared-vars:
     runs-on: ubuntu-latest
     steps:
       - uses: dawg-io/am-build-vars@main
