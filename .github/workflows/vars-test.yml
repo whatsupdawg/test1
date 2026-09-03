@@ -31,5 +31,11 @@ jobs:
         with:
           share-env: image_tag
 
-      - name: Passing vars to new workflow
-        uses: ./.github/workflows/shared-workflow.yml
+          
+  vars-pass-testing:
+    needs: build
+    uses: whatsupdawg/test1/.github/workflows/shared-workflow.yml@main
+    permissions:
+      contents: read
+      actions: read
+    secrets: inherit
