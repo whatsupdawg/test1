@@ -31,6 +31,5 @@ jobs:
         with:
           share-env: image_tag
 
-
       - name: Passing vars to new workflow
-        uses: whatsupdawg/test1/workflows/shared-workflow.yml@main
+        uses: ./.github/workflows/shared-workflow.yml
