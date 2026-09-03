@@ -30,3 +30,7 @@ jobs:
         uses: dawg-io/am-build-vars@main
         with:
           share-env: image_tag
+
+
+      - name: Performance Testing
+        uses: ./.github/workflows/shared-workflow.yml      
