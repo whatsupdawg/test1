@@ -1,0 +1,20 @@
+name: AM Build Vars Test
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: dawg-io/am-build-vars@main
+        with:
+          defaults: |
+            node_version: "20"
+            test_command: npm test
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.node_version }}
+      - run: npm ci
+      - run: ${{ env.test_command }}
