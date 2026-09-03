@@ -21,3 +21,12 @@ jobs:
         run: |
           echo "node version ${{ env.node_version }}"
           echo "test_command ${{ env.test_command }}"
+
+
+      - name: Adding New image_tag var
+        run: echo "image_tag=sha-$(git rev-parse --short HEAD)" >> "$GITHUB_ENV"
+      
+      - name: Share image_tag Var
+        uses: dawg-io/am-build-vars@main
+        with:
+          share-env: image_tag
