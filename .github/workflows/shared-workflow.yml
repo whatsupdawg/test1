@@ -12,5 +12,3 @@ jobs:
 
       - run: |
           echo "image tag $image_tag"
-
-
